@@ -8,9 +8,11 @@ public class Test {
 
     public static void main(String[] args) {
         try {
-            MagicianConfigure.load("/home/xxx/application.map", ReadMode.EXTERNAL);
+            MagicianConfigure.load("/application.properties", ReadMode.LOCAL);
 
-            String userName = Environment.get("userName");
+            System.out.println(Environment.get("user.name"));
+
+            System.out.println(Environment.get("JAVA_HOME"));
         } catch (Exception e){
             e.printStackTrace();
         }

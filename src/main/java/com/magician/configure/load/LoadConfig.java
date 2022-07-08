@@ -13,14 +13,14 @@ public class LoadConfig {
 
     public void load(String path, ReadMode readMode) throws Exception {
         InputStream inputStream = getFileContent(path, readMode);
-
         try {
             Properties p = new Properties();
             p.load(inputStream);
 
             for(Object key : p.keySet()){
                 String keyStr = key.toString();
-                ConfigCacheManager.add(keyStr, p.getProperty(keyStr));
+                String value = p.getProperty(keyStr, System.getenv(keyStr));
+                ConfigCacheManager.add(keyStr, new String(value.getBytes("ISO8859-1"), "utf-8"));
             }
         } catch (Exception e) {
             throw e;

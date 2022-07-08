@@ -47,21 +47,21 @@ Load from external
 
 ```java
 // The absolute path to the file on the local machine
-MagicianConfigure.load("/home/xxx/application.map", ReadMode.EXTERNAL);
+MagicianConfigure.load("/home/xxx/application.properties", ReadMode.EXTERNAL);
 ```
 
 Load from remote
 
 ```java
 // The path to the file under the class resource
-MagicianConfigure.load("/application.map", ReadMode.LOCAL);
+MagicianConfigure.load("/application.properties", ReadMode.LOCAL);
 ```
 
 Load from local
 
 ```java
 // Remote path to file, HTTP only
-MagicianConfigure.load("https://www.test.com/application.map", ReadMode.REMOTE);
+MagicianConfigure.load("https://www.test.com/application.properties", ReadMode.REMOTE);
 ```
 
 ### Get the configured value based on key
