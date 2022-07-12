@@ -48,9 +48,7 @@ public class LoadConfig {
             case EXTERNAL:
                 return new FileInputStream(path);
             case REMOTE:
-                URL url = new URL(path);
-                URLConnection urlConnection = url.openConnection();
-                return urlConnection.getInputStream();
+                return new URL(path).openConnection().getInputStream();
         }
         return null;
     }
