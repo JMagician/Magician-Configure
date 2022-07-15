@@ -54,5 +54,5 @@ MagicianConfigure.load("https://www.test.com/application.properties", ReadMode.R
 
 ```java
 // If it is not in the configuration file, it will automatically take the environment variables
-String userName = Environment.get("JAVA_HOME");
+String userName = Environment.get("userName");
 ```
