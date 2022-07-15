@@ -36,14 +36,14 @@ Load from external
 MagicianConfigure.load("/home/xxx/application.properties", ReadMode.EXTERNAL);
 ```
 
-Load from remote
+Load from local
 
 ```java
 // The path to the file under the class resource
 MagicianConfigure.load("/application.properties", ReadMode.LOCAL);
 ```
 
-Load from local
+Load from remote
 
 ```java
 // Remote path to file, HTTP only
