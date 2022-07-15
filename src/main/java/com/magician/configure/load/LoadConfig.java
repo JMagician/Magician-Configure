@@ -9,10 +9,19 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Properties;
 
+/**
+ * Configuration loading class
+ */
 public class LoadConfig {
 
     private final String CHARSET_NAME = "UTF-8";
 
+    /**
+     * Read the data from the configuration file into the cache
+     * @param path
+     * @param readMode
+     * @throws Exception
+     */
     public void load(String path, ReadMode readMode) throws Exception {
         InputStream inputStream = null;
         InputStreamReader inputStreamReader = null;
@@ -40,6 +49,13 @@ public class LoadConfig {
         }
     }
 
+    /**
+     * Read the configuration file into the stream
+     * @param path
+     * @param readMode
+     * @return
+     * @throws Exception
+     */
     private InputStream getFileContent(String path, ReadMode readMode) throws Exception {
         switch (readMode) {
             case LOCAL:

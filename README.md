@@ -25,20 +25,6 @@ When fetching configuration data, if it is not in the cache, it will automatical
     <artifactId>Magician-Configure</artifactId>
     <version>1.0.0</version>
 </dependency>
-
-<!-- This is Magician -->
-<dependency>
-    <groupId>com.github.yuyenews</groupId>
-    <artifactId>Magician</artifactId>
-    <version>2.0.5</version>
-</dependency>
-
-<!-- This is the log package, which supports any package that can be bridged with slf4j -->
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-jdk14</artifactId>
-    <version>1.7.12</version>
-</dependency>
 ```
 
 ### Loading configuration data
